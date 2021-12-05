@@ -2,20 +2,28 @@
 
 ## Clone the repository
 
+```bash
 $ git clone git@github.com:singularityltd/minikube_hello_world.git
+```
 
 ## Enter the configuration directory
 
+```bash
 $ cd minikube_hello_world/config
+```
 
 ## Deploy the deployment to minikube 
 
+```bash
 $  kubectl apply -f ./deployment.yml
+```
 
 ## Verify the deployment has successfully been deployed 
 
+```bash
 $ kubectl get deployments
 $ kubectl get pods -l app=singularity-webapp
+```
 
 ## Start minikube tunnel to allow access to the cluster
 
@@ -41,7 +49,7 @@ kubernetes           ClusterIP      10.96.0.1        <none>           443/TCP   
 singularity-webapp   LoadBalancer   10.109.142.109   10.109.142.109   5000:30372/TCP   4m7s
 ```
 
-The flask webapp can be tested by curl, or a browser, using http://10.109.142.109:5000 (replace the IP with the one listed in the deployment)
+The flask webapp can be tested by curl, or a browser, using http://10.109.142.109:5000 (replace the IP with the one listed in the EXTERNAL-IP in the service
 
 
 

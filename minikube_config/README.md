@@ -1,15 +1,9 @@
 # Configuring the webapp service on minikube
 
-## Clone the repository
-
-```bash
-$ git clone git@github.com:singularityltd/minikube_hello_world.git
-```
-
 ## Enter the configuration directory
 
 ```bash
-$ cd minikube_hello_world/config
+$ cd minikube_hello_world/minikube_config
 ```
 
 ## Deploy the deployment to minikube 

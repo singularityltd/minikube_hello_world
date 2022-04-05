@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: singularity-webapp 
+spec:
+  selector:
+    matchLabels:
+      app: singularity-webapp 
+  replicas: 3 
+  template:
+    metadata:
+      labels:
+        app: singularity-webapp 
+    spec:
+      containers:
+      - name: singularity-webapp 
+        image: singularityltd/singularity-flask-webapp:latest 
+        ports:
+        - containerPort: 5000 
